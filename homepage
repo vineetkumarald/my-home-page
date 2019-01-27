@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+   <link rel="icon" type="image" href="logo.png">
+</head>
+<body>
+
+<style type="text/css">
+	 
+  *{
+
+  	padding: 0;
+  	margin:0;
+  }
+
+  body
+  {
+
+  }
+
+.topborder
+  {
+    width: 100%;
+    position: fixed;
+    height: 5px;
+    background: linear-gradient(90deg,red,yellow,blue,green,pink,grey);
+    background-size: 400% 100%;
+    animation: topborder 1s linear infinite;
+  }
+
+  @keyframes topborder
+  {
+
+    0%{background-position: 0%,0%;}
+    25%{background-position: 25%,0%;}
+    50%{background-position: 50%,0%;}
+    75%{background-position: 75%,0%;}
+    100%{background-position: 100%,0%;}
+  }
+
+
+
+
+ .main
+ {
+  
+  background:url(b2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+
+ } 
+
+ #menu
+ {
+ 
+ width: 20%;
+ background: #222222;
+ height: 100%;
+ position: absolute;
+ border-top-right-radius: 25px;
+ top:0;
+ left:-20%;
+ transition: 0.2s;
+ z-index: 1;
+
+ }
+
+ .cross
+ {
+ 	position: absolute;
+ 	background: ;
+ 	width: 50px;
+ 	height: 50px;
+ 	right: 6%;
+ 	top:8%;
+ 	display: flex;
+ 	
+ 	flex-direction: column;
+    align-items: center;	
+    justify-content: space-around;
+ }
+
+ .first,.second,.third
+ {
+ 	
+ 	background: linear-gradient(#cc2b5e , #753a88);
+ 	width: 80%;
+ 	height: 10%;
+ 	transition: 0.2s;
+ 
+ }
+
+
+ .cross .first
+ {
+  top:5%;
+  margin-top: 10%;
+ }
+
+ .cross .second
+ {
+  top:25%;
+ }
+
+ 
+
+ .cross .third
+ {
+  top:45%;
+  margin-bottom: 10%;
+ }
+
+
+ .cross:hover
+  {
+    
+
+  }
+
+
+
+ .cross:hover .first
+  {
+   transform: rotateZ(45deg) translate(8px,8px);
+  }
+
+
+ .cross:hover .second
+  {
+   display: none;
+  }
+
+
+
+ 
+ .cross:hover .third
+  {
+   transform: rotateZ(-45deg) translate(8px,-8px);
+  }
+
+
+
+  .imageborder
+ {
+    position: absolute;
+ 	width: 120px;
+ 	
+ 	height: 150px;
+ 	background: linear-gradient(#cc2b5e ,#753a88);
+ 	border-radius: 50%;
+ 	top:40px;
+ 	left:10px;
+ 	display:flex;
+ 	justify-content: center;
+ 	align-items: center;
+
+ }
+
+
+ .image
+ {
+    position: absolute;
+ 	width: 96%;
+    transition: 0.5s;
+ 	height: 96%;
+ 	border-radius: 50%;
+ 	background: url(index.jpg);
+ 	background-size: contain;
+ 	
+ }
+
+ .imageborder:hover .image
+ {
+ 	transform: scale(1.3) translate(10px,10px);
+ 	box-shadow: -8px -8px 8px  white;
+ }
+
+ .imageborder:hover
+ {
+ 	background: none;
+ }
+
+
+.list
+{
+	position: absolute;
+	width: 90%;
+	height: 65%;
+	background: none;
+	top:33%;
+	left:4%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.list a
+{   
+
+	background:linear-gradient(90deg,#FFF6B7 ,#F6416C);
+	margin-top:20px;
+	display: block;
+	text-decoration: none; 
+	width: 80%;
+	height: 10%;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: -12%;
+	font-size: 20px;
+	color:white;
+	transition: 0.2s;
+}
+
+
+
+
+.list a:hover
+{
+	opacity: 0.5;
+	transform: scale(1.1);
+
+}
+
+.nav
+{
+	width: 90%;
+	position: fixed;
+	height: 100px;
+	background: none;
+  z-index: 1;
+}
+
+
+ #menubtn
+ {
+ 	position: absolute;
+  background: linear-gradient( 90deg,#b92b27, 
+#1565c0 );
+ 	width: 150px;
+ 	height: 40px;
+ 	top: 30px;
+ 	left: 20px;
+ 	border: none;
+ 	color: white;
+ 	font-size: 20px;
+ 	border-radius: 5px;
+ 	font-family: sans-serif;
+
+ }
+
+
+
+#menubtn:hover
+{
+	opacity: 0.9;
+	transform: scale(1.05,1.2);
+	cursor: pointer;
+}
+
+
+.search
+{
+  position: absolute;
+  width: 50%;
+  height: 40px;
+  background: white;
+  top:30px;
+  left:20%;
+  border-radius: 5px;
+
+}
+
+
+.sitelogo
+{
+ 
+ width: 10%;
+ position: absolute;
+ right:3%;
+ height: 100px;
+ background: url(logo.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+
+}
+
+.profile
+{
+  position: absolute;
+  width:40px;
+  height: 40px;
+  background: linear-gradient( 90deg,#b92b27,
+#1565c0 );
+  left:72%;
+  top:30px;
+  border-radius: 5px;
+
+ 
+}
+
+.photo
+{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left:0px;
+  border-radius: 5px;
+	background: url(elon1.jpg);
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+}
+
+.message
+{
+  position: absolute;
+  width:40px;
+  height: 40px;
+  background:  	#3b5998;
+  left:79%;
+  top:30px;
+  border-radius: 5px;
+ 
+}
+
+.notification
+{
+  position: absolute;
+  width:40px;
+  height: 40px;
+  background:  	#3b5998;
+  left:86%;
+  top:30px;
+  border-radius: 5px;
+ 
+}
+
+
+.photo:hover,.message:hover,.notification:hover
+{
+  transform: scale(1.05) translate(3px,3px);
+  box-shadow: -3px -3px 3px  #444444;
+
+}
+
+
+.searchicon
+{
+  position: absolute;
+  width:40px;
+  height: 40px;
+  background:  	#3b5998;
+  left:0;
+  top:0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+ 
+}
+
+.searchicon i
+{  
+	color: white;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left:13px;
+    top:13px;
+
+}
+
+#searchinput
+{ 
+	position: absolute;
+	background: none;
+	border: none;
+	width: calc(100% - 40px);
+	height: 40px;
+	right: 0px;
+	border-top-right-radius: 5px;  
+   	border-bottom-right-radius: 5px; 
+    border: 1px solid #3b5998;
+   	box-sizing: border-box;
+   	padding-left:10px;
+   	font-size: 15px; 
+
+}
+
+#searchinput:focus
+{
+	border: 2px solid grey;
+	font-size: 20px;
+}
+
+
+.message i
+{  
+	color: white;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left:13px;
+    top:10px;
+
+}
+
+
+
+.notification i
+{  
+	color: white;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left:15px;
+    top:10px;
+
+}
+
+.message:hover,.notification:hover,.profile:hover
+{
+	cursor: pointer;
+}
+
+
+
+.friendlist
+{
+
+  position: fixed;
+  width: 20%;
+  height: 85%;
+  background:linear-gradient(90deg, #b92b27,
+#1565c0 );
+  top:15%;
+  left:2%;
+  border-radius:5px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.friendlistnames
+{
+	
+	width: 90%;
+	height: 40px;
+	background:white;
+	border-radius:5px; 
+	margin-top: 8%;
+	display: flex;
+	flex-direction:row;
+
+}
+
+ 
+
+
+
+
+.friendlistnames:hover
+{
+	cursor: pointer;
+  transform: scale(1.05,1.2);
+}
+
+
+
+.friendpic
+{
+ 
+ width: 20%;
+ height: 34px;
+ background: url(salman1.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ margin-left:2%;
+ margin-top:2%;
+ border-radius: 50%;
+
+}
+
+
+.friendname
+{
+  width: 66%;
+  background: none;
+  height: 34px;
+  margin-right: 1%;
+  margin-top: 2%;
+  text-align: left;
+  padding-left: 5px;
+  line-height: 30px;
+  font-family: sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+.friendonline
+{
+
+ width: 10%;
+ background: none;
+ height: 34px;
+ margin-top: 2%;
+	
+}
+
+
+
+  
+  .post
+  {
+    background: linear-gradient(90deg,red,yellow,blue,green,blue,yellow,red);
+    background-size: 400% 100%;
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    right: 2%;
+    top:15%;
+    animation: posts 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  @keyframes posts 
+  {
+    0%{background-position: 0% 0%;}
+    25%{background-position: 25% 0%;}
+    50%{background-position: 50% 0%;}
+    75%{background-position: 75% 0%;}
+    100%{background-position: 100% 0%;}
+
+  }
+
+
+  .postmain
+  {
+    width: 99%;
+    height: 100%;
+    position: absolute;
+    top:0.8%;
+    background:white;
+    border-radius: 5px;
+
+  }
+
+ .postmain .mainheading
+ {
+
+  color:red;
+  font-size: 20vw;
+ 
+
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<div class="main">
+	
+
+  <div class="topborder"></div>
+
+
+
+<div class="nav">
+   
+   <button id="menubtn" onclick="dis()">MENU</button>
+  
+
+   
+   <div class="search">
+   	 <div class="searchicon">
+   	 <i class="fa fa-search" aria-hidden="true"></i>
+     </div>
+
+     <input type="text/number/email" name="" id="searchinput" placeholder="seach">
+
+   </div>
+
+   <div class="profile">
+
+    <div class="photo"></div>
+
+   </div>
+
+   <div class="message">
+   		<i class="fas fa-comments"  ></i>
+   </div>
+
+   <div class="notification">
+   	 	<i class="fa fa-bell" aria-hidden="true"></i>
+
+   	 
+
+   </div>
+
+
+
+
+</div><!-- nav  -->
+
+
+<div class="sitelogo">
+   	
+
+</div>
+
+
+
+
+<div id="menu">
+ 	
+    <div class="cross" onclick="shut()">
+  	 
+  	    <div class="first"></div>
+  	    <div class="second"></div>
+  	    <div class="third"></div>
+
+    </div>  <!-- cross -->
+
+
+  <div class="imageborder">
+  	<div class="image"></div>
+  </div>
+
+   
+    <div class="list">
+
+       <a href="#" class="links">about me</a>
+       <a href="#" class="links">followers</a>
+       <a href="#" class="links">setting</a>
+       <a href="#" class="links">groups</a>
+       <a href="#" class="links">help me</a>
+       <a href="#" class="links">log out</a>
+
+
+    </div>
+      
+
+
+
+ </div><!-- menu -->
+
+
+
+ <div class="friendlist" onclick="openmessage()">
+ 	
+    <div class="friendlistnames">
+    	
+    	<div class="friendpic" style="background: url(salman1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname" >salman khan</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+
+    </div>
+
+    <div class="friendlistnames" onclick="openmessage()">
+    		<div class="friendpic" style="background: url(aish1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">aishwarya</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+    </div>
+
+
+    <div class="friendlistnames" onclick="openmessage()">
+    	
+    	<div class="friendpic" style="background: url(kriti1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">kriti senon</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+
+    </div>
+
+    <div class="friendlistnames" onclick="openmessage()">
+    		<div class="friendpic" style="background: url(deepika1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">deepika padukone</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+    </div>
+   
+
+    <div class="friendlistnames" onclick="openmessage()">
+    	
+    	<div class="friendpic" style="background: url(arnauld1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">arnauld</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+
+    </div>
+
+    <div class="friendlistnames" onclick="openmessage()">
+    		<div class="friendpic" style="background: url(robert1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">robert</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+    </div>
+    
+
+    <div class="friendlistnames" onclick="openmessage()">
+    	
+    	<div class="friendpic" style="background: url(downey1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">robert dwaney</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+
+    </div>
+
+    <div class="friendlistnames" onclick="openmessage()">
+    		<div class="friendpic" style="background: url(rock1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">rock</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+    </div>
+
+       <div class="friendlistnames" onclick="openmessage()">
+    		<div class="friendpic" style="background: url(emma1.jpg);background-size: 40px 40px;"></div>
+        <div class="friendname">emma watson</div>
+        <div class="friendonline"></div><!-- if we want to show online by point otherwise by background -->
+
+
+    </div>
+   
+   
+   
+ 
+ </div>
+
+     <!-- friend list -->
+
+
+
+
+
+
+ <div class="post">
+   
+   <div class="postmain">
+     
+
+  
+    <h1 class="mainheading"> my post</h1>
+
+ 
+ <style type="text/css">
+   
+ .messagebox
+ {
+  width: 200px;
+  height: 250px;
+  background: white;
+  position: fixed;
+  bottom: 0%;
+  left: 23.5%;
+  border: 3px solid #3b5998;
+  border-top-right-radius:5px;
+  border-top-left-radius: 5px; 
+  display: none;
+ }
+
+
+ .messageboxtop
+ {
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  background: #3b5998 ;
+ }
+
+  .messageboxtop .onlinename
+  {
+    color: white;
+    font-family: sans-serif;
+    left:15%;
+    margin-top: 2%;
+    position: absolute;
+
+  }
+
+  .messages
+  {
+    width: 100%;
+    height: 88%;
+    top:12%;
+
+    color: black;
+    position: absolute;
+    background: white;
+  }
+  
+   .onlinedot
+   {
+  background: #76d451;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position:absolute;
+  left:10px;
+  top:10px;
+
+    }
+
+  .closemessage
+  {
+    color: white;
+    background:#3b5998;
+    border: none;
+    font-family: sans-serif;
+    position: absolute;
+    right: 5%;
+    top:15%;
+
+  }
+
+
+  .closemessage:hover
+  {
+    cursor: pointer;
+    transform:scale(1.2);
+  }
+  
+
+ </style>
+
+   
+
+  <div class="messagebox">
+    <div class="messageboxtop">
+      <span class="onlinename">salman khan</span>
+      <span class="onlinedot" ></span>
+      <button class="closemessage" onclick="closemessages()">X</button>
+    </div>     
+  
+   <div class="messages">
+     
+     hey!how are u bro
+     
+   </div>
+
+
+   
+  
+
+
+
+  </div><!-- messagebox -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+       <!-- postmain -->
+
+ 
+ </div> 
+ <!-- post -->
+
+
+
+
+
+
+
+
+
+
+</div> <!-- main -->
+
+
+
+
+    
+
+ <script type="text/javascript">
+ 	
+  
+   function dis()
+   {
+
+    document.getElementById('menu').style.transform="translateX(200px)";
+
+    
+   }
+
+
+
+
+   function shut()
+   {
+
+
+   document.getElementById('menu').style.transform="translateX(-200px)";
+
+
+   }
+
+
+   var x=document.getElementsByClassName('friendlistnames');
+
+   x[0].style.background="#3CB371";
+
+    x[4].style.background="#3CB371";
+   
+    x[6].style.background="#3CB371";
+     x[7].style.background="#3CB371";
+      
+
+  function closemessages()
+  {
+  
+  var z=document.getElementsByClassName('messagebox');
+  z[0].style.display="none";
+
+  
+
+  }
+
+  function openmessage()
+  {
+
+   var x=document.getElementsByClassName('messagebox');
+
+   x[0].style.display="block";
+
+
+  }
+
+
+
+
+
+ </script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
